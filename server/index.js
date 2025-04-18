@@ -11,7 +11,7 @@ serverWs.on('connection', server => {
 	const interval = setInterval(() => {
 		const value = Math.sin(time);
 	    server.send(JSON.stringify({ time, value }));
-	    t += 0.1;
+	    time += 0.1;
 	}, 10);
 
 	server.on('close', () => {
